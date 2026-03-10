@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f7fa;
+  color: #1f2933;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page__header {
+  margin-bottom: 24px;
+}
+
+.page__header h1 {
+  margin: 0 0 8px;
+  font-size: 1.8rem;
+}
+
+.page__intro {
+  margin: 0;
+  color: #52606d;
+}
+
+.notice {
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: #eef4ff;
+  border: 1px solid #bcccdc;
+}
+
+.notice h2 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.notice p {
+  margin: 0;
+}
+
+.actions-list {
+  display: grid;
+  gap: 16px;
+}
+
+.action-card {
+  background: #ffffff;
+  border: 1px solid #d9e2ec;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.action-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.action-card__title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.field,
+.checkbox-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.checkbox-field {
+  flex-direction: row;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #9fb3c8;
+  border-radius: 6px;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #9fb3c8;
+  background: #ffffff;
+  color: #102a43;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font: inherit;
+}
+
+.button--primary {
+  background: #0b69ff;
+  border-color: #0b69ff;
+  color: #ffffff;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.status-message {
+  min-height: 1.5rem;
+  margin-top: 16px;
+  color: #0b6e4f;
+}
+
+.status-message--error {
+  color: #b42318;
+}

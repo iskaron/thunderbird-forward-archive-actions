@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Forward and Archive Actions",
+  "description": "Adds configurable message header actions that forward messages to a preset address and archive them.",
+  "version": "0.1.0",
+  "author": "Oliver Meyer <olm@cativa.net>",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "forward-archive-actions@cativa.net",
+      "strict_min_version": "128.0"
+    }
+  },
+  "permissions": [
+    "storage",
+    "messagesRead",
+    "messagesMove",
+    "compose",
+    "compose.send",
+    "notifications"
+  ],
+  "background": {
+    "scripts": [
+      "src/lib/config.js",
+      "src/lib/menu.js",
+      "src/lib/forwarding.js",
+      "src/background.js"
+    ]
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "src/icons/action-16.svg",
+    "32": "src/icons/action-32.svg",
+    "64": "src/icons/action-64.svg"
+  },
+  "message_display_action": {
+    "default_title": "Forward and archive",
+    "default_label": "Forward+Archive",
+    "default_icon": {
+      "16": "src/icons/action-16.svg",
+      "32": "src/icons/action-32.svg"
+    },
+    "default_popup": "src/popup/popup.html"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "thunderbird-forward-archive-actions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Thunderbird MailExtension that adds configurable forward-and-archive actions to the message header.",
+  "scripts": {
+    "test": "node --test",
+    "build": "node scripts/build-xpi.mjs",
+    "clean": "node scripts/clean.mjs"
+  }
+}

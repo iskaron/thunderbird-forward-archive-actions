@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forward and Archive Actions</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="page">
+      <header class="page__header">
+        <h1>Forward and Archive Actions</h1>
+        <p class="page__intro">
+          Configure the actions shown in the message header dropdown.
+        </p>
+      </header>
+
+      <section class="notice notice--info">
+        <h2>Known limitation</h2>
+        <p>
+          Thunderbird does not currently expose a supported MailExtension API
+          for hiding the built-in Archive button. This extension only adds its
+          own configurable actions.
+        </p>
+      </section>
+
+      <form id="config-form" class="config-form">
+        <div id="actions-list" class="actions-list" aria-live="polite"></div>
+
+        <div class="toolbar">
+          <button type="button" id="add-action-button">Add action</button>
+          <button type="submit" class="button--primary">Save changes</button>
+        </div>
+      </form>
+
+      <p id="status-message" class="status-message" role="status"></p>
+    </main>
+
+    <template id="action-template">
+      <section class="action-card">
+        <div class="action-card__header">
+          <h2 class="action-card__title">Action</h2>
+          <button type="button" class="remove-action-button">Remove</button>
+        </div>
+
+        <label class="field">
+          <span>Label</span>
+          <input type="text" name="label" maxlength="60" required>
+        </label>
+
+        <label class="field">
+          <span>Destination email address</span>
+          <input type="email" name="destinationEmail" maxlength="254" required>
+        </label>
+
+        <label class="checkbox-field">
+          <input type="checkbox" name="requirePdfAttachment">
+          <span>Only forward when a PDF attachment is present</span>
+        </label>
+      </section>
+    </template>
+
+    <script src="../lib/config.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

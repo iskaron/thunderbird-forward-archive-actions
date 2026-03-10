@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose action</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="popup">
+      <h1 class="popup__title">Forward and archive</h1>
+      <div id="actions-container" class="popup__actions"></div>
+      <div class="popup__footer">
+        <button type="button" id="open-settings-button" class="popup__link-button">
+          Open settings
+        </button>
+      </div>
+      <p id="status-message" class="popup__status" role="status"></p>
+    </main>
+
+    <script src="../lib/config.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
